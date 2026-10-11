@@ -1,0 +1,28 @@
+{
+  "configuracion": {"moneda": "ARS", "envioGratisDesde": 150000, "costoEnvio": 6990},
+  "categorias": [
+    {"id": "todos", "nombre": "Todos"},
+    {"id": "audio", "nombre": "Audio"},
+    {"id": "perifericos", "nombre": "Periféricos"},
+    {"id": "accesorios", "nombre": "Accesorios"},
+    {"id": "wearables", "nombre": "Wearables"}
+  ],
+  "entregas": [
+    {"id": "envio", "nombre": "Envío a domicilio"},
+    {"id": "retiro", "nombre": "Retiro sin cargo"}
+  ],
+  "pagos": [
+    {"id": "tarjeta", "nombre": "Tarjeta · pago simulado"},
+    {"id": "transferencia", "nombre": "Transferencia · pago simulado"}
+  ],
+  "productos": [
+    {"id": "audio-01", "nombre": "Auriculares Wave Pro", "categoria": "audio", "precio": 89990, "stock": 8, "descripcion": "Tu música, sin distracciones.", "detalle": "Sonido envolvente y un diseño cómodo para acompañarte desde la primera reunión hasta tu playlist favorita.", "especificaciones": ["Conexión Bluetooth", "Cancelación de ruido", "Hasta 30 horas de autonomía"], "imagen": "assets/img/headphones.svg", "tono": "mint", "etiqueta": "Favorito"},
+    {"id": "perif-01", "nombre": "Teclado Mech Mini", "categoria": "perifericos", "precio": 72990, "stock": 6, "descripcion": "Más espacio para tus ideas.", "detalle": "Formato compacto, teclas de perfil alto y una sensación de escritura precisa para tu escritorio.", "especificaciones": ["Formato compacto 65 %", "Conexión USB-C", "Interruptores mecánicos"], "imagen": "assets/img/keyboard.svg", "tono": "sand", "etiqueta": "Nuevo"},
+    {"id": "perif-02", "nombre": "Mouse Orbit Wireless", "categoria": "perifericos", "precio": 34990, "stock": 12, "descripcion": "Precisión que se siente natural.", "detalle": "Un mouse inalámbrico liviano y silencioso, pensado para trabajar con comodidad en cualquier lugar.", "especificaciones": ["Sensor de hasta 2400 DPI", "Clic silencioso", "Conexión inalámbrica USB"], "imagen": "assets/img/mouse.svg", "tono": "blue", "etiqueta": "Esencial"},
+    {"id": "wear-01", "nombre": "Smartwatch Pulse", "categoria": "wearables", "precio": 119990, "stock": 5, "descripcion": "Un compañero para tu ritmo.", "detalle": "Notificaciones y seguimiento de actividad en un reloj liviano, con una pantalla clara y correa de silicona.", "especificaciones": ["Pantalla táctil de 1,7 pulgadas", "Registro de actividad física", "Hasta 7 días de autonomía"], "imagen": "assets/img/watch.svg", "tono": "pink", "etiqueta": "Nuevo"},
+    {"id": "audio-02", "nombre": "Parlante Move", "categoria": "audio", "precio": 54990, "stock": 9, "descripcion": "Llevá tu playlist a todos lados.", "detalle": "Sonido compacto con un cuerpo resistente y una práctica correa para que la música vaya con vos.", "especificaciones": ["Conexión Bluetooth", "Potencia de 10 W", "Hasta 12 horas de autonomía"], "imagen": "assets/img/speaker.svg", "tono": "sand", "etiqueta": "Portátil"},
+    {"id": "acc-01", "nombre": "Hub Connect 6 en 1", "categoria": "accesorios", "precio": 44990, "stock": 7, "descripcion": "Todas tus conexiones, resueltas.", "detalle": "Ampliá las posibilidades de tu notebook con un adaptador liviano de seis conexiones en una sola pieza.", "especificaciones": ["Salida HDMI", "Puertos USB y lector SD", "Conexión USB-C"], "imagen": "assets/img/hub.svg", "tono": "blue", "etiqueta": "Esencial"},
+    {"id": "acc-02", "nombre": "Soporte Rise", "categoria": "accesorios", "precio": 29990, "stock": 4, "descripcion": "Tu escritorio, a otro nivel.", "detalle": "Un soporte de aluminio para elevar tu notebook y mantener el escritorio ordenado mientras trabajás.", "especificaciones": ["Aluminio liviano", "Base antideslizante", "Compatible con notebooks de hasta 15,6 pulgadas"], "imagen": "assets/img/stand.svg", "tono": "mint", "etiqueta": "Para tu setup"},
+    {"id": "audio-03", "nombre": "Earbuds Air Lite", "categoria": "audio", "precio": 49990, "stock": 10, "descripcion": "Libertad en formato mini.", "detalle": "Auriculares livianos con estuche de carga para llamadas y música en movimiento.", "especificaciones": ["Conexión Bluetooth", "Estuche de carga USB-C", "Hasta 20 horas con el estuche"], "imagen": "assets/img/earbuds.svg", "tono": "pink", "etiqueta": "Favorito"}
+  ]
+}

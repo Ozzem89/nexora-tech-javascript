@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b26">
+  <meta name="description" content="Nexora Tech: encontrá tu próximo upgrade. Simulador de tienda online con catálogo, carrito y compra interactiva.">
+  <title>Nexora Tech | Tu próximo upgrade</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/vendor/sweetalert2.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+  <div class="announcement">Un upgrade para tu día a día. <span id="beneficio-envio">Descubrí la colección.</span><span class="announcement-note">Tienda de demostración</span></div>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="Nexora Tech, inicio"><span class="brand-symbol" aria-hidden="true">n.</span><span>NEXORA<span class="brand-tech">TECH</span></span></a>
+      <nav aria-label="Navegación principal"><a class="nav-link" href="#catalogo">Explorar productos <span aria-hidden="true">↗</span></a></nav>
+      <div class="header-actions"><button class="order-link" id="ver-pedido" type="button" hidden>Mi última compra</button><button class="cart-button" id="abrir-carrito" type="button" aria-label="Abrir carrito, 0 productos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7ZM8 8V6a4 4 0 0 1 8 0v2"/></svg><span>Carrito</span><span class="cart-count" id="cantidad-carrito">0</span></button></div>
+    </div>
+  </header>
+  <main id="inicio">
+    <section class="hero container" aria-labelledby="hero-titulo">
+      <div class="hero-copy"><div class="eyebrow"><span class="green-dot"></span> TECNOLOGÍA QUE VA CON VOS</div><h1 id="hero-titulo">Tu próximo<br>upgrade<br><span>empieza acá.</span></h1><p>Trabajá, creá y conectate mejor.<br>Elegí los esenciales para hacer tu día más simple.</p><a class="button button-dark" href="#catalogo">Encontrá tu próximo favorito <span aria-hidden="true">↗</span></a><div class="hero-small"><span class="small-line"></span> Buenos productos. Grandes posibilidades.</div></div>
+      <div class="hero-art"><span class="hero-edition">LA SELECCIÓN NEXORA / 01</span><div class="hero-orbit"></div><img src="assets/img/headphones.svg" alt="Ilustración de auriculares inalámbricos color grafito" width="520" height="420" fetchpriority="high"><span class="floating-note"><span aria-hidden="true">♪</span> Menos ruido.<br><strong>Más vos.</strong></span><div class="hero-bottom"><span>SONIDO PARA CADA MOMENTO</span><a href="#catalogo" id="explorar-audio" aria-label="Explorar productos de audio">↗</a></div></div>
+    </section>
+    <div class="container benefits" aria-label="Beneficios de la tienda"><div><span class="benefit-icon" aria-hidden="true">↗</span><span><strong>Elegí cómo recibirlo</strong><small>Envío o retiro sin cargo</small></span></div><div><span class="benefit-icon" aria-hidden="true">◇</span><span><strong>Comprá a tu ritmo</strong><small>Tu carrito queda guardado</small></span></div><div><span class="benefit-icon" aria-hidden="true">✓</span><span><strong>Sin vueltas</strong><small>Confirmación en pocos pasos</small></span></div></div>
+    <section class="catalog container" id="catalogo" aria-labelledby="catalogo-titulo">
+      <div class="section-heading"><div><div class="eyebrow">ELEGIDOS PARA TU DÍA A DÍA</div><h2 id="catalogo-titulo">Encontrá tu próximo favorito<span>.</span></h2></div><span class="collection-caption">Esenciales que hacen la diferencia.</span></div>
+      <div class="catalog-tools"><div class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="busqueda">Buscar productos</label><input id="busqueda" type="search" placeholder="¿Qué estás buscando?" maxlength="100" autocomplete="off"></div><div class="sort-field"><label for="orden">Ordenar por</label><select id="orden"><option value="destacados">Destacados</option><option value="precio-menor">Menor precio</option><option value="precio-mayor">Mayor precio</option><option value="nombre">Nombre: A a Z</option></select></div></div>
+      <div class="filter-row"><div class="category-filters" id="categorias" role="group" aria-label="Filtrar por categoría"></div><p id="cantidad-resultados" class="result-count" aria-live="polite"></p></div>
+      <div class="catalog-status" id="estado-catalogo" role="status"><span class="loader" aria-hidden="true"></span><h3>Preparando tu próximo upgrade…</h3><p>Estamos cargando los productos.</p></div>
+      <div id="productos" class="product-grid" aria-busy="true"></div>
+      <noscript><p class="catalog-status">Activá JavaScript en tu navegador para usar el catálogo y el carrito.</p></noscript>
+    </section>
+    <section class="container end-banner"><div><span class="eyebrow">MENOS COMPLICACIONES. MÁS POSIBILIDADES.</span><h2>Tu espacio. Tu ritmo. Tu tecnología.</h2></div><a href="#catalogo" aria-label="Volver al catálogo">↗</a></section>
+  </main>
+  <footer class="site-footer container"><a class="brand" href="#inicio"><span class="brand-symbol" aria-hidden="true">n.</span><span>NEXORA<span class="brand-tech">TECH</span></span></a><p>Proyecto final de JavaScript · Emanuel Constantino<br><span>Catálogo y precios ficticios. No se realizan cobros ni envíos reales.</span></p><button id="reiniciar-datos" type="button" class="text-button">Borrar mis datos de la tienda</button></footer>
+  <dialog id="dialogo-carrito" class="cart-dialog" aria-labelledby="carrito-titulo">
+    <div class="drawer-header"><div><span class="eyebrow" id="paso-compra">01 / TU SELECCIÓN</span><h2 id="carrito-titulo">Tu carrito<span>.</span></h2></div><button id="cerrar-carrito" type="button" class="icon-button" aria-label="Cerrar carrito">×</button></div>
+    <div class="drawer-body"><div id="carrito-vacio" class="empty-cart"><div class="empty-icon" aria-hidden="true">＋</div><h3>El próximo upgrade es tuyo.</h3><p>Explorá el catálogo y sumá tus favoritos.</p><button type="button" class="button button-dark" id="seguir-explorando">Explorar productos <span aria-hidden="true">↗</span></button></div>
+      <div id="contenido-carrito" hidden><div id="vista-carrito"><div class="cart-items" id="items-carrito"></div><button type="button" class="text-button muted" id="vaciar-carrito">Vaciar carrito</button><div class="delivery-field"><label for="tipo-entrega">¿Cómo querés recibirlo?</label><select id="tipo-entrega"></select><p id="mensaje-envio"></p></div><div class="order-totals" id="totales-carrito"></div><button id="continuar-compra" class="button button-dark full-width" type="button">Continuar compra <span aria-hidden="true">→</span></button><p class="checkout-note">Compra simulada · Sin registro · Sin cobros reales</p></div>
+        <form id="formulario-compra" hidden><button type="button" class="text-button back-link" id="volver-carrito">← Volver al carrito</button><p class="form-intro">Completá tus datos para generar el comprobante de demostración.</p><label for="nombre-cliente">Nombre y apellido</label><input id="nombre-cliente" name="nombre" type="text" minlength="3" maxlength="80" autocomplete="name" required placeholder="Ej.: Ana Pérez"><label for="email-cliente">Email</label><input id="email-cliente" name="email" type="email" maxlength="120" autocomplete="email" required placeholder="nombre@ejemplo.com"><div id="campo-direccion"><label for="direccion-cliente">Dirección de entrega</label><input id="direccion-cliente" name="direccion" type="text" minlength="6" maxlength="160" autocomplete="street-address" placeholder="Calle, número y localidad"></div><label for="medio-pago">Medio de pago simulado</label><select id="medio-pago" name="pago" required></select><p class="privacy-note">Podés usar datos ficticios. No se solicita información bancaria ni se envía un email. El comprobante se guarda en este navegador.</p><div class="order-totals" id="totales-checkout"></div><button class="button button-dark full-width" type="submit">Revisar y confirmar <span aria-hidden="true">→</span></button><p class="checkout-note">Revisarás el resumen antes de finalizar.</p></form>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
